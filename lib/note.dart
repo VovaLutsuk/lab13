@@ -1,3 +1,5 @@
+import 'package:intl/intl.dart';
+
 class Note {
   final int? id;
   final String text;
@@ -25,5 +27,11 @@ class Note {
       text: map['text'],
       createdAt: DateTime.parse(map['createdAt']),
     );
+  }
+
+  // Форматована дата і час
+  String get formattedDateTime {
+    final formatter = DateFormat('yyyy-MM-dd HH:mm:ss'); // Рік-місяць-день години:хвилини:секунди
+    return formatter.format(createdAt);
   }
 }

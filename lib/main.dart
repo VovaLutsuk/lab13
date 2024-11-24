@@ -99,7 +99,7 @@ class _NotePageState extends State<NotePage> {
                   return ListTile(
                     title: Text(note.text),
                     subtitle: Text(
-                      'Created: ${note.createdAt}',
+                      'Created: ${note.formattedDateTime}', // Відображення дати і часу
                     ),
                   );
                 },
